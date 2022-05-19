@@ -11,7 +11,7 @@ public class Filter {
     public List<Integer> filterOut(List<Integer> source) {
         List<Integer> result = new ArrayList<>();
         Logger logger = Logger.getInstance();
-        for (int value:source) {
+        for (int value : source) {
             if (value >= treshold) {
                 result.add(value);
                 logger.log("Элемент " + value + " проходит");

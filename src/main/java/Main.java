@@ -10,7 +10,6 @@ public class Main {
 
     private static List<Integer> listOfInteger(int size, int limit) {
         List<Integer> listCreate = new ArrayList<>();
-        System.out.print("Вот случайный список:");
         for (int numOfList = 0; numOfList < size; numOfList++) {
             listCreate.add(getRandom(limit));
         }
@@ -27,7 +26,7 @@ public class Main {
         }
     }
 
-    private static int input(Scanner scanner, String msg){
+    private static int input(Scanner scanner, String msg) {
         String sizeLN;
         do {
             System.out.print(msg);
@@ -44,10 +43,10 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         int size = input(scanner, "Введите размер списка: ");
-        int limit = input(scanner,"Введите верхнюю границу для значений: ");
-        list = listOfInteger(size,limit);
+        int limit = input(scanner, "Введите верхнюю границу для значений: ");
+        list = listOfInteger(size, limit);
         System.out.println("Вот случайный список:" + list);
-        int filtering = input(scanner,"Введите порог для фильтра: ");
+        int filtering = input(scanner, "Введите порог для фильтра: ");
         Filter filter = new Filter(filtering);
         list = filter.filterOut(list);
         logger.log("Отфильтрованный список:" + list);
